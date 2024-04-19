@@ -20,9 +20,20 @@ function App() {
 
   return (
     <div className="App">
-      <PieChart data={chartData} />
-      <ExpensesForm />
-      <Expenses expenses={expensesData} />
+      <div className="header">
+        <h1>Expense Tracker</h1>
+      </div>
+      <div className="content">
+        <div className="chart">
+          <PieChart data={chartData} />
+        </div>
+        <div className="form">
+          <ExpensesForm />
+        </div>
+        <div className="expenses">
+          <Expenses expenses={expensesData} />
+        </div>
+      </div>
     </div>
   );
 }
