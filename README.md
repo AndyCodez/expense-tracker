@@ -5,15 +5,17 @@ This project is a simplified web-based personal finance tracking application dev
 Backend API: 
 
 ## Features
-1. Expense Tracking: Users can add expenses with details such as date, expense name, amount, and category.
-2. Clear Expense List: The application provides a solution for displaying the list of expenses in a readable format.
-3. Modular Architecture: The application architecture is designed to separate concerns and promote modularity, allowing for easy extension to include additional features in the future.
-4. Data Visualization: Incorporates a pie chart built using Chart.js to display financial data and insights.
+1. **Expense Tracking**: Users can add expenses with details such as date, expense name, amount, and category.
+2. **Clear Expense List**: The application provides a solution for displaying the list of expenses in a readable format.
+3. **Modular Architecture**: The application architecture is designed to separate concerns and promote modularity, allowing for easy extension to include additional features in the future.
+4. **Data Visualization**: Incorporates a pie chart built using Chart.js to display financial data and insights.
 
 ## Technology Stack
-Backend: Node.js (Express.js), MongoDB
-Frontend: React.js
-Charting Library: Chart.js
+**Backend**: Node.js (Express.js), MongoDB
+
+**Frontend**: React.js
+
+**Charting Library**: Chart.js
 
 ## Setting Up the Application
 1. Clone this repository to your local machine.
