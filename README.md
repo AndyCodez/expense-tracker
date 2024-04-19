@@ -26,7 +26,7 @@ Backend API: https://github.com/AndyCodez/expense-tracker-backend
 5. Start the MongoDB server.
 6. Start the backend server by running npm start in the backend directory.
 7. Start the frontend development server by running npm start in the frontend directory.
-8. Access the application in your web browser at http://localhost:3000.
+8. Access the application in your web browser at http://localhost:3001 or the through the url you provided in your .env file.
 
 ## Application Architecture
 The application follows a client-server architecture. The backend, developed using Node.js with Express.js and MongoDB, serves as the API server handling requests from the frontend. The frontend, built with React.js, communicates with the backend to manage user interactions and data visualization. The codebase is structured to separate concerns, with clear division between frontend and backend functionalities.
