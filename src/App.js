@@ -4,6 +4,7 @@ import Expenses from './components/Expenses';
 import ExpensesForm from './components/ExpensesForm';
 import PieChart from './components/PieChart';
 import axios from './api/axios';
+import { backgroundColors } from './constants/data';
 
 function App() {
   const [expensesData, setExpensesData] = useState([]);
@@ -47,20 +48,11 @@ function App() {
       datasets: [{
         label: "Expenses",
         data: totalAmounts,
-        backgroundColor: getRandomColors(categories.length)
+        backgroundColor: backgroundColors
       }]
     };
     setChartData(retrievedChartData);
   }, [expensesData]);
-
-  const getRandomColors = (numColors) => {
-    const colors = [];
-    for (let i = 0; i < numColors; i++) {
-      const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16); // Generate random hexadecimal color
-      colors.push(randomColor);
-    }
-    return colors;
-  }
 
   return (
     <div className="App">
