@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from '../api/axios';
+import { categories } from '../constants/data';
 
 function ExpensesForm() {
     const [date, setDate] = useState('');
@@ -66,12 +67,16 @@ function ExpensesForm() {
                 </div>
                 <div>
                     <label>Category:</label>
-                    <input
-                        type="text"
+                    <select
                         value={category}
                         onChange={(e) => setCategory(e.target.value)}
                         required
-                    />
+                    >
+                        <option value="">Select Category</option>
+                        {categories.map((cat, index) => (
+                            <option key={index} value={cat}>{cat}</option>
+                        ))}
+                    </select>
                 </div>
                 <button type="submit">Add Expense</button>
             </form>

@@ -9,7 +9,7 @@ function App() {
   const [expensesData, setExpensesData] = useState([]);
   const [chartData, setChartData] = useState({
     labels: [],
-    datasets: [{ label: "Expenses", data: [] }]
+    datasets: [{ label: "Expenses", data: [], backgroundColor: [] }]
   });
 
   useEffect(() => {
@@ -29,12 +29,25 @@ function App() {
   }, []);
 
   useEffect(() => {
+
+    // Aggregate expenses by category and calculate total amount for each category
+    const aggregatedData = expensesData.reduce((acc, expense) => {
+      if (!acc[expense.category]) {
+        acc[expense.category] = 0;
+      }
+      acc[expense.category] += expense.amount;
+      return acc;
+    }, {});
+
+    const categories = Object.keys(aggregatedData);
+    const totalAmounts = Object.values(aggregatedData);
+
     const retrievedChartData = {
-      labels: expensesData.map(data => data.category),
+      labels: categories,
       datasets: [{
         label: "Expenses",
-        data: expensesData.map(data => data.amount),
-        backgroundColor: getRandomColors(expensesData.length)
+        data: totalAmounts,
+        backgroundColor: getRandomColors(categories.length)
       }]
     };
     setChartData(retrievedChartData);
