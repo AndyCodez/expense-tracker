@@ -60,14 +60,16 @@ function App() {
         <h1>Expense Tracker</h1>
       </div>
       <div className="content">
-        <div className="chart">
-          <PieChart data={chartData} />
-        </div>
         <div className="form">
           <ExpensesForm />
         </div>
+        {expensesData.length > 0 &&
+          <div className="chart">
+            <PieChart data={chartData} />
+          </div>
+        }
         <div className="expenses">
-          <Expenses expenses={expensesData} />
+          {expensesData.length > 0 && <Expenses expenses={expensesData} />}
         </div>
       </div>
     </div>

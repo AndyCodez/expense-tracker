@@ -23,11 +23,11 @@
 .chart,
 .form {
   border: 1px solid #ccc;
-  padding: 20px;
+  padding: 30px;
   border-radius: 5px;
-  max-width: 500px;
+  max-width: 50vw;
+  max-height: 400px;
 }
-
 
 .form input[type="text"],
 .form input[type="number"],
