@@ -1,10 +1,16 @@
 import React from 'react'
 
-function Expenses() {
+function Expenses({ expenses }) {
     return (
-        <div>
-
-        </div>
+        <table>
+            <tbody>
+                {expenses.map((expense) => (
+                    <tr key={expense.id}>
+                        <td>{expense.name}</td>
+                    </tr>
+                ))}
+            </tbody>
+        </table>
     )
 }
 

@@ -21,8 +21,8 @@ function App() {
   return (
     <div className="App">
       <PieChart data={chartData} />
-      <Expenses />
       <ExpensesForm />
+      <Expenses expenses={expensesData} />
     </div>
   );
 }
