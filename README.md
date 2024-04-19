@@ -1,4 +1,6 @@
 # Expense Tracker (Frontend) - A Personal Finance Tracking Application
+![image](https://github.com/AndyCodez/expense-tracker/assets/4503148/e48a6af9-2767-48e4-9461-3b93861f845b)
+
 ## Overview
 This project is a simplified web-based personal finance tracking application developed as a rapid prototype within a limited timeframe. It allows users to add and categorize their expenses, providing a basic user interface for adding expenses and viewing them in a list and graph format.
 
@@ -42,4 +44,5 @@ During development, the following assumptions were made:
 1. Users will primarily interact with the application through a web browser.
 2. Authentication and user management functionalities are not required for this prototype.
 3. The focus is on basic expense tracking and visualization, rather than advanced financial analysis features.
-4. Due to time constraints, API versioning was not implemented in this prototype. Implementing API versioning is recommended for future development to manage changes and maintain backward compatibility.
+4. Currently, the application displays a pie chart based on expense categories and the aggregated amounts for each category. 
+5. Due to time constraints, API versioning was not implemented in this prototype. Implementing API versioning is recommended for future development to manage changes and maintain backward compatibility.
