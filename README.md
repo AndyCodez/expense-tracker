@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+# Expense Tracker (Frontend) - A Personal Finance Tracking Application
+## Overview
+This project is a simplified web-based personal finance tracking application developed as a rapid prototype within a limited timeframe. It allows users to add and categorize their expenses, providing a basic user interface for adding expenses and viewing them in a list and graph format.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Backend API: 
 
-## Available Scripts
+## Features
+1. Expense Tracking: Users can add expenses with details such as date, expense name, amount, and category.
+2. Clear Expense List: The application provides a solution for displaying the list of expenses in a readable format.
+3. Modular Architecture: The application architecture is designed to separate concerns and promote modularity, allowing for easy extension to include additional features in the future.
+4. Data Visualization: Incorporates a pie chart built using Chart.js to display financial data and insights.
 
-In the project directory, you can run:
+## Technology Stack
+Backend: Node.js (Express.js), MongoDB
+Frontend: React.js
+Charting Library: Chart.js
 
-### `npm start`
+## Setting Up the Application
+1. Clone this repository to your local machine.
+2. Navigate to the project directory.
+3. Rename `.env.example` to `.env` and configure your application.
+4. Install dependencies by running npm install.
+5. Start the MongoDB server.
+6. Start the backend server by running npm start in the backend directory.
+7. Start the frontend development server by running npm start in the frontend directory.
+8. Access the application in your web browser at http://localhost:3000.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Application Architecture
+The application follows a client-server architecture. The backend, developed using Node.js with Express.js and MongoDB, serves as the API server handling requests from the frontend. The frontend, built with React.js, communicates with the backend to manage user interactions and data visualization. The codebase is structured to separate concerns, with clear division between frontend and backend functionalities.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Testing
+Due to the time-limited nature of this rapid prototype, testing was not included in the development process. While testing is a crucial aspect of software development for ensuring code quality and reliability, it was omitted in this prototype to prioritize meeting the project's deadline.
 
-### `npm test`
+In a production environment or for further development, writing comprehensive unit tests, integration tests, and end-to-end tests would be highly recommended to validate the application's functionality and maintain code quality over time.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Assumptions
+During development, the following assumptions were made:
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Users will primarily interact with the application through a web browser.
+2. Authentication and user management functionalities are not required for this prototype.
+3. The focus is on basic expense tracking and visualization, rather than advanced financial analysis features.
+4. Due to time constraints, API versioning was not implemented in this prototype. Implementing API versioning is recommended for future development to manage changes and maintain backward compatibility.
