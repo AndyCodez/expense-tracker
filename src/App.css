@@ -25,7 +25,9 @@
   border: 1px solid #ccc;
   padding: 20px;
   border-radius: 5px;
+  max-width: 500px;
 }
+
 
 .form input[type="text"],
 .form input[type="number"],
