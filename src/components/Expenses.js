@@ -4,14 +4,16 @@ function Expenses({ expenses }) {
     return (
         <table className="expenses-table">
             <thead>
-                <th>Date</th>
-                <th>Expense</th>
-                <th>Amount</th>
-                <th>Category</th>
+                <tr>
+                    <th>Date</th>
+                    <th>Expense</th>
+                    <th>Amount</th>
+                    <th>Category</th>
+                </tr>
             </thead>
             <tbody>
-                {expenses.map((expense) => (
-                    <tr key={expense.id}>
+                {expenses?.map((expense) => (
+                    <tr key={expense._id}>
                         <td>{expense.date}</td>
                         <td>{expense.name}</td>
                         <td>{expense.amount}</td>

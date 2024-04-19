@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from '../api/axios';
 
 function ExpensesForm() {
     const [date, setDate] = useState('');
@@ -6,9 +7,25 @@ function ExpensesForm() {
     const [name, setName] = useState('');
     const [category, setCategory] = useState('');
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
-        console.log('Submitted:', { date, amount, name, category });
+        const data = { date, name, amount, category };
+
+        try {
+            const createdExpense = await axios.post('/api/expenses',
+                JSON.stringify(data),
+                {
+                    headers: { 'Content-Type': 'application/json' },
+                    withCredentials: false
+                });
+
+            console.log(`Successfully created expense: ${createdExpense._id}`);
+            // Refresh the page after successful submission
+            window.location.reload();
+        } catch (error) {
+            console.error(error);
+        }
+
         // Reset form fields after submission
         setDate('');
         setAmount('');
