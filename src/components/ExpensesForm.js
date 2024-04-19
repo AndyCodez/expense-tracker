@@ -12,6 +12,12 @@ function ExpensesForm() {
         event.preventDefault();
         const data = { date, name, amount, category };
 
+        // Validate amount
+        if (parseFloat(amount) <= 0 || isNaN(parseFloat(amount))) {
+            alert("Amount must be a positive number");
+            return;
+        }
+
         try {
             const createdExpense = await axios.post('/api/expenses',
                 JSON.stringify(data),
