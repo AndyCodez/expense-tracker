@@ -2,7 +2,8 @@
 ## Overview
 This project is a simplified web-based personal finance tracking application developed as a rapid prototype within a limited timeframe. It allows users to add and categorize their expenses, providing a basic user interface for adding expenses and viewing them in a list and graph format.
 
-Backend API: 
+## Key URLs
+Backend API: https://github.com/AndyCodez/expense-tracker-backend 
 
 ## Features
 1. **Expense Tracking**: Users can add expenses with details such as date, expense name, amount, and category.
