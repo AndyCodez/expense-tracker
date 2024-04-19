@@ -42,7 +42,7 @@ In a production environment or for further development, writing comprehensive un
 During development, the following assumptions were made:
 
 1. Users will primarily interact with the application through a web browser.
-2. Authentication and user management functionalities are not required for this prototype.
+2. Authentication and user management functionalities are not required for this prototype. There is however a functional backend authentication API in the `auth` branch.
 3. The focus is on basic expense tracking and visualization, rather than advanced financial analysis features.
 4. Currently, the application displays a pie chart based on expense categories and the aggregated amounts for each category. 
 5. Due to time constraints, API versioning was not implemented in this prototype. Implementing API versioning is recommended for future development to manage changes and maintain backward compatibility.
